@@ -10,7 +10,8 @@ import UIKit
 class CustomCell: UITableViewCell {
 
     static var className: String { String(describing: CustomCell.self) }
-
+    @IBOutlet weak var dynamicLabel: UILabel!
+    
     //MARK: - PARTS
     @IBOutlet weak var postFrameView: UIView! {
         didSet {

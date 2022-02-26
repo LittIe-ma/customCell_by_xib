@@ -41,7 +41,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hc-iH-aJh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変ここは可変" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hc-iH-aJh">
                                         <rect key="frame" x="0.0" y="49" width="312" height="112"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -111,13 +111,14 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="FmO-sP-iYn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="1j2-9R-QPQ"/>
+                    <constraint firstItem="FmO-sP-iYn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="1j2-9R-QPQ"/>
                     <constraint firstAttribute="trailing" secondItem="FmO-sP-iYn" secondAttribute="trailing" constant="10" id="BKM-K7-elp"/>
                     <constraint firstItem="FmO-sP-iYn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="g0Z-i9-8uR"/>
-                    <constraint firstAttribute="bottom" secondItem="FmO-sP-iYn" secondAttribute="bottom" constant="10" id="mai-Vi-BWD"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FmO-sP-iYn" secondAttribute="bottom" constant="10" id="mai-Vi-BWD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="dynamicLabel" destination="5hc-iH-aJh" id="v2l-da-jqb"/>
                 <outlet property="postFrameView" destination="FmO-sP-iYn" id="d9Q-0G-LbE"/>
             </connections>
             <point key="canvasLocation" x="167.39130434782609" y="89.397321428571431"/>
