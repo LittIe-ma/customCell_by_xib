@@ -22,20 +22,20 @@ class ViewController: UIViewController {
         getData()
     }
     
-    func getData(){
+    func getData() {
         let urlString = "https://jsonplaceholder.typicode.com/posts"
-        guard let url = URL(string: urlString) else {return}
+        guard let url = URL(string: urlString) else { return }
         
-        let task = URLSession.shared.dataTask(with: url) { [weak self](data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             if let error = error {
                 print(error)
                 return
             }
             
-            guard let data = data else {return}
+            guard let data = data else { return }
             let decoder = JSONDecoder()
             let tempArray = try? decoder.decode([TestData].self, from: data)
-            guard let unwrappedArray = tempArray else {return}
+            guard let unwrappedArray = tempArray else { return }
             self?.dataArray = unwrappedArray
             
             DispatchQueue.main.async {
